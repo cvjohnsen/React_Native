@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import {
     Text, View, ScrollView, StyleSheet,
-    Picker, Switch, Button, Modal, Alert
+    Picker, Switch, Button, Alert
 } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { createAnimatableComponent } from 'react-native-animatable';
 import * as Animatable from 'react-native-animatable';
 
 class Reservation extends Component {
@@ -30,7 +29,7 @@ class Reservation extends Component {
         Alert.alert(
             'Begin Search?',
             'Number of Campers: ' + this.state.campers + "\n" +
-            'Hike-In' + this.state.hikeIn + "\n" +
+            'Hike-In? '  + this.state.hikeIn + "\n" +
             'Date: ' + this.state.date,
             [
                 {
@@ -137,22 +136,6 @@ const styles = StyleSheet.create({
     },
     formItem: {
         flex: 1
-    },
-    modal: {
-        justifyContent: 'center',
-        margin: 20
-    },
-    modalTitle: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        backgroundColor: '#5637DD',
-        textAlign: 'center',
-        color: '#fff',
-        marginBottom: 20
-    },
-    modalText: {
-        fontSize: 18,
-        margin: 10
     }
 });
 
